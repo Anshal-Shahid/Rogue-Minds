@@ -36,12 +36,12 @@ html {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-a{
+a {
     text-decoration: none;
     color: white;
 }
 
-section{
+section {
     padding: var(--padding);
 }
 
@@ -49,16 +49,17 @@ section{
 
 /* nav */
 
-nav{
-    position: fixed ;
-    padding: 22px 40px ;
+nav {
+    position: fixed;
+    padding: 22px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    z-index: 999;
 }
 
-nav a{
+nav a {
     font-size: clamp(40px, 5vw, 42px);
 }
 
@@ -68,7 +69,7 @@ nav ul {
     gap: 17px;
 }
 
-nav ul li{
+nav ul li {
     list-style-type: none;
     font-size: 20px;
 
@@ -78,7 +79,7 @@ nav ul li{
 
 
 /* hero */
-.hero{
+.hero {
     height: 100vh;
     padding: var(--padding);
     position: relative;
@@ -93,42 +94,269 @@ nav ul li{
     top: 70px;
 }
 
-.hero h1{
+.hero h1 {
     font-size: clamp(50px, 6vw, 90vw);
     width: fit-content;
     font-weight: 500;
 }
 
-.hero  .middle{
+.hero .middle {
     margin-left: auto;
 
     margin-right: 50px;
 }
 
-.hero .scroll{
+.hero .scroll {
     position: absolute;
     left: 80%;
-    transform: translate(-50%,0%);
+    transform: translate(-50%, 0%);
     bottom: 20px;
     border: 1px solid white;
     border-radius: 20px;
-    padding: 8px 28px ;
+    padding: 8px 28px;
 }
 
 /* section-1 */
 
-.section-1{
+.section-1 {
     min-height: 100vh;
 
-}   
-
-.section-1 .heading{
-    width: fit-content;
-    margin: 0 auto;
 }
 
-.section-1 h2{
+.section-1 .heading {
+    width: fit-content;
+    margin: 0 auto;
+    margin-bottom: 110px;
+}
+
+.section-1 h2 {
     line-height: 90px;
     font-size: 75px;
-    
+
+}
+
+
+.section-1 .para {
+    display: flex;
+    margin: 0 auto;
+    /* justify-content: space-around; */
+    gap: 160px;
+    /* justify-content: center; */
+    margin-left: 90px;
+
+
+}
+
+.section-1 .para>div {
+    width: fit-content;
+    width: min(300px, 100%);
+}
+
+.section-1 p {
+    width: min(300px, 100%);
+    font-size: 16px;
+}
+
+.section-1 .para .left {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* section-2 */
+
+.section-2 {
+    min-height: 80vh;
+    display: flex;
+    gap: 100px;
+
+    background-color: rgb(215, 217, 219);
+    color: black;
+
+
+
+}
+
+.section-2 .left {
+    display: flex;
+    flex-direction: column;
+
+    width: fit-content;
+    font-size: 17px;
+    text-transform: uppercase;
+    gap: 8px;
+
+
+}
+
+.section-2 .left p {
+    white-space: nowrap;
+}
+
+.section-2 .left .box {
+    border: 1px solid black;
+    border-radius: 15px;
+    justify-content: center;
+    width: fit-content;
+    padding: 4px 11px;
+}
+
+
+
+.section-2 .right {
+    width: 90%;
+}
+
+.section-2 .right .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    width: 90%;
+    margin-left: auto;
+}
+
+
+.section-2 .right .img {
+    border: 1px solid black;
+}
+
+.section-2 .right .img img {
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+
+
+
+
+/*  */
+
+/* Base styles with .section-2 prefix */
+.section-2 .logo-grid-container {
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-2 .logo-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    /* 5 logos per row */
+    width: 100%;
+    max-width: 1000px;
+    /* Optional: limits the width */
+    border-top: 1px solid #000000;
+    border-left: 1px solid #000000;
+
+}
+
+.section-2 .logo-item {
+    position: relative;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+    padding: 20px;
+}
+
+/* The black dots from image_56e99c.png */
+.section-2 .logo-item::before,
+.section-2 .logo-item::after,
+.section-2 .logo-dot-bl,
+.section-2 .logo-dot-br {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: #000000;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+/* Dot positions for intersections */
+.section-2 .logo-item::before {
+    top: -3px;
+    left: -3px;
+}
+
+/* Top Left */
+.section-2 .logo-item::after {
+    top: -3px;
+    right: -3px;
+}
+
+/* Top Right */
+.section-2 .logo-dot-bl {
+    bottom: -3px;
+    left: -3px;
+}
+
+/* Bottom Left */
+.section-2 .logo-dot-br {
+    bottom: -3px;
+    right: -3px;
+}
+
+/* Bottom Right */
+
+.section-2 .logo-item img {
+    max-width: 100%;
+    max-height: 90%;
+    filter: grayscale(100%);
+    object-fit: contain;
+    font-family: 'Inter', sans-serif;
+    /* Fallback for alt text */
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+    .section-2 .logo-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+
+/* section-3 */
+
+
+/* section-4 */
+
+
+
+/* section-5 */
+
+
+.section-5 {
+    min-height: 100vh ;
+
+}
+
+
+.section-5 .row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgb(126, 126, 126);
+    border-bottom: 1px solid rgb(126, 126, 126);
+    padding: 18px 5px;
+}
+
+.section-5 .row ul{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.section-5 .row h2{
+    font-size: 70px;
+}
+
+.section-5 .row li{
+    list-style-type: none;
+    font-size: 16px;
+    color: rgb(217, 217, 217);
 }
