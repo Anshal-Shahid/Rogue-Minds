@@ -1,0 +1,134 @@
+:root {
+    --primary-color: rgb(222, 222, 222);
+    --padding: 100px 48px;
+    font-size: 24px;
+}
+
+@media (max-width:760px) {
+    :root {
+        --padding: 80px 36px;
+
+    }
+}
+
+@media (max-width:500px) {
+    :root {
+        --padding: 60px 24px;
+
+    }
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    letter-spacing: .5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+}
+
+body,
+html {
+    width: 100%;
+    color: var(--primary-color);
+    background-color: rgb(17, 17, 17);
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+section{
+    padding: var(--padding);
+}
+
+
+
+/* nav */
+
+nav{
+    position: fixed ;
+    padding: 22px 40px ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+nav a{
+    font-size: clamp(40px, 5vw, 42px);
+}
+
+
+nav ul {
+    display: flex;
+    gap: 17px;
+}
+
+nav ul li{
+    list-style-type: none;
+    font-size: 20px;
+
+}
+
+
+
+
+/* hero */
+.hero{
+    height: 100vh;
+    padding: var(--padding);
+    position: relative;
+}
+
+.hero .container {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    padding: 0px 40px;
+    position: relative;
+    top: 70px;
+}
+
+.hero h1{
+    font-size: clamp(50px, 6vw, 90vw);
+    width: fit-content;
+    font-weight: 500;
+}
+
+.hero  .middle{
+    margin-left: auto;
+
+    margin-right: 50px;
+}
+
+.hero .scroll{
+    position: absolute;
+    left: 80%;
+    transform: translate(-50%,0%);
+    bottom: 20px;
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 8px 28px ;
+}
+
+/* section-1 */
+
+.section-1{
+    min-height: 100vh;
+
+}   
+
+.section-1 .heading{
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.section-1 h2{
+    line-height: 90px;
+    font-size: 75px;
+    
+}
