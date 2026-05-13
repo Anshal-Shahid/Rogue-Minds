@@ -668,8 +668,12 @@ nav ul li {
 
 
 footer {
-    min-height: 80vh;
+    min-height: fit-content;
     padding: var(--padding);
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding-bottom: 35px !important;
 
 }
 
@@ -727,4 +731,25 @@ footer .right .links ul{
     display: flex;
     flex-direction: column;
     gap: 5px;
+}
+
+footer .bottom{
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .bottom .ai{
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+footer .bottom .ai .imgs{
+    display: flex;
+    gap: 10px;
+}
+
+footer .bottom .ai .imgs img{
+    border-radius: 5px;
+    width: 35px;
 }
