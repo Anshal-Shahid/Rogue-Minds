@@ -806,44 +806,66 @@ li.hover-underline {
 
 
 /*  */
-
- .animated-shape {
-            position: fixed;
-            top: 50vh;
-            left: 50vw;
-            width: 162px;
-            height: 162px;
-            margin-top: -81px; 
-            margin-left: -81px;
-            z-index: -1; 
-            transform-origin: center center;
-        }
-
-        .text-container {
-            position: fixed;
-            top: 50vh;
-            right: -100vw; 
-            transform: translateY(-50%);
-            z-index: 10;
-            color: #ffffff;
-            font-size: 3rem; /* Perfectly sized for 2 lines */
-            font-weight: bold;
-            text-align: center;
-            text-transform: uppercase;
-            line-height: 1.4;
-            letter-spacing: 2px;
-            width: 90vw; 
-        }
-
-        .text-line {
-            display: block;
-        }
-
-        /* Essential for GSAP to be able to move them up and down */
-        .word {
-            display: inline-block; 
-            will-change: transform, opacity;
-        }
-        
-        /* A tiny gap between words */
-        .space { display: inline-block; width: 12px; }
+ /* ── Scoped entirely under .section-6 ── */
+ 
+  .section-6 {
+    position: relative;
+    height: 300vh;
+    background-color: #000000;
+    overflow: hidden;
+  }
+ 
+  /* Sticky container that pins content while scrolling through section-6 */
+  .section-6 .s6-sticky {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+ 
+  .section-6 .s6-animated-shape {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 162px;
+    height: 162px;
+    margin-top: -81px;
+    margin-left: -81px;
+    z-index: 1;
+    transform-origin: center center;
+  }
+ 
+  .section-6 .s6-text-container {
+    position: absolute;
+    top: 50%;
+    right: -100vw;
+    transform: translateY(-50%);
+    z-index: 10;
+    color: #ffffff;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 1.4;
+    letter-spacing: 2px;
+    width: 90vw;
+    font-family: 'Oswald', 'Inter', sans-serif;
+  }
+ 
+  .section-6 .s6-text-line {
+    display: block;
+  }
+ 
+  .section-6 .s6-word {
+    display: inline-block;
+    will-change: transform, opacity;
+  }
+ 
+  .section-6 .s6-space {
+    display: inline-block;
+    width: 12px;
+  }
